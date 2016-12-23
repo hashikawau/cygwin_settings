@@ -1,0 +1,30 @@
+[user]
+    name = hashikawa
+    email = hashikawa.yuuichi@gmail.com
+[core]
+    editor = vim
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[diff]
+    #algorithm = histogram
+    #algorithm = patience
+    histogram = true
+    #patience = true
+[alias]
+    ;hist = log --pretty=format:\\\"%h %a%d | %s%d [%an] \\\" --graph --date=short
+    hist = log --graph --date=short
+    st = status
+    show = show -M
+    sh = show --stat
+    ls = ls-files
+[color]
+    ui = auto
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    grep = auto
+
+[push]
+    default = matching
