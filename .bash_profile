@@ -72,17 +72,17 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/lib
 
 #----------------------------------------------------------
 # hadoop
-export HADOOP_HOME=/usr/local/hadoop-2.7.1
-export PATH=$PATH:$HADOOP_HOME/bin
+#export HADOOP_HOME=/usr/local/hadoop-2.7.1
+#export PATH=$PATH:$HADOOP_HOME/bin
 
 #----------------------------------------------------------
 # java-8
+#export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$JAVA_HOME/bin:$PATH
+
 #alias java='java -J-Duser.language=en'
 #alias javac='javac -J-Duser.language=en'
 export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
-export JAVA_HOME=$HOME/local/packages/jdk
-#export PATH=$PATH:$JAVA_HOME/bin
-export PATH=$JAVA_HOME/bin:$PATH
 
 #----------------------------------------------------------
 # scala, sbt
@@ -133,10 +133,9 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
 #----------------------------------------------------------
 # cuda
-export CUDA_INSTALL_PATH=/usr/local/cuda
-export PATH=$PATH:$CUDA_INSTALL_PATH/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_INSTALL_PATH/lib64
-
+#export CUDA_INSTALL_PATH=/usr/local/cuda
+#export PATH=$PATH:$CUDA_INSTALL_PATH/bin
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_INSTALL_PATH/lib64
 
 #----------------------------------------------------------
 # MeCab
@@ -150,14 +149,14 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_INSTALL_PATH/lib64
 
 #----------------------------------------------------------
 # CaboCha
-export CABOCHA_HOME=$HOME/local/cabocha
+#export CABOCHA_HOME=$HOME/local/cabocha
 #export PATH=$PATH:${CABOCHA_HOME}/bin/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CABOCHA_HOME}/lib/
-export PYTHONPATH=$PYTHONPATH:${CABOCHA_HOME}/python/
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CABOCHA_HOME}/lib/
+#export PYTHONPATH=$PYTHONPATH:${CABOCHA_HOME}/python/
 
 #----------------------------------------------------------
 # SPTK(signal processing tool kit)
-export SPTK_HOME=$HOME/local/sptk
+#export SPTK_HOME=$HOME/local/sptk
 #export PATH=$PATH:${SPTK_HOME}/bin/
 
 #----------------------------------------------------------
@@ -191,13 +190,13 @@ export PYTHONPATH=$PYTHONPATH:~/local/python/lib.linux-x86_64-2.7
 
 #----------------------------------------------------------
 # nodejs
-export NODE_HOME=$HOME/local/nodejs
-export PATH=$PATH:$NODE_HOME/bin
+#export NODE_HOME=$HOME/local/nodejs
+#export PATH=$PATH:$NODE_HOME/bin
 
 #----------------------------------------------------------
 # play framework
-export PLAY_HOME=$HOME/local/play
-export PATH=$PATH:$PLAY_HOME/bin
+#export PLAY_HOME=$HOME/local/play
+#export PATH=$PATH:$PLAY_HOME/bin
 
 #----------------------------------------------------------
 # django
