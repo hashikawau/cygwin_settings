@@ -15,11 +15,6 @@
 # set utf-8 (default is shift-jis = 932)
 chcp.com 65001
 
-# java
-#alias java='java -J-Duser.language=en'
-#alias javac='javac -J-Duser.language=en'
-export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
-
 #----------------------------------------------------------
 # read ~/.bashrc
 #----------------------------------------------------------
@@ -37,7 +32,7 @@ export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
 #fi
 
 # git completion
-git_completion=~/settings/git-completion.bash
+git_completion=~/local/sh/git-completion.bash
 if [ -f ${git_completion} ]; then
     . ${git_completion}
 fi
@@ -50,7 +45,7 @@ fi
 prompt='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]$PWD\[\e[0m\]'
 
 # git prompt
-git_prompt=~/settings/git-prompt.sh
+git_prompt=~/local/sh/git-prompt.sh
 if [ -f ${git_prompt} ]; then
     . ${git_prompt}
 fi
@@ -87,14 +82,18 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/lib
 
 #----------------------------------------------------------
 # hadoop
-export HADOOP_HOME=/usr/local/hadoop-2.7.1
-export PATH=$PATH:$HADOOP_HOME/bin
+#export HADOOP_HOME=/usr/local/hadoop-2.7.1
+#export PATH=$PATH:$HADOOP_HOME/bin
 
 #----------------------------------------------------------
 # java-8
-export JAVA_HOME=$HOME/local/package/java/jdk
+export JAVA_HOME=$HOME/local/packages/java/jdk
 #export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$JAVA_HOME/bin:$PATH
+
+#alias java='java -J-Duser.language=en'
+#alias javac='javac -J-Duser.language=en'
+export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
 
 #----------------------------------------------------------
 # java(for maven)
@@ -109,32 +108,32 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 #----------------------------------------------------------
 # freeglut
-export GLUT_HOME=~/local/glut
-export LD_LIBRARY_PATH=-L${GLUT_HOME}/lib
-export LDFLAGS=-L${GLUT_HOME}/lib
-export CPPFLAGS=-I${GLUT_HOME}/include
+#export GLUT_HOME=~/local/glut
+#export LD_LIBRARY_PATH=-L${GLUT_HOME}/lib
+#export LDFLAGS=-L${GLUT_HOME}/lib
+#export CPPFLAGS=-I${GLUT_HOME}/include
 
 #----------------------------------------------------------
 # ghc, haskell platform
-export GHC_HOME=~/local/ghc
-export PATH=$PATH:$GHC_HOME/bin
-export HASKELL_HOME=~/local/haskell
-export PATH=$PATH:$HASKELL_HOME/bin
-export PATH=$PATH:~/.cabal/bin
+#export GHC_HOME=~/local/ghc
+#export PATH=$PATH:$GHC_HOME/bin
+#export HASKELL_HOME=~/local/haskell
+#export PATH=$PATH:$HASKELL_HOME/bin
+#export PATH=$PATH:~/.cabal/bin
 
 #----------------------------------------------------------
 # maven
-export M2_HOME=$HOME/local/package/maven/apache-maven-3.3.9
+export M2_HOME=$HOME/local/packages/maven/apache-maven-3.3.9
 export PATH=$PATH:$M2_HOME/bin
 
 #----------------------------------------------------------
 # groovy
-export GROOVY_HOME=$HOME/local/package/groovy/groovy-2.4.7
+export GROOVY_HOME=$HOME/local/packages/groovy/groovy-2.4.7
 export PATH=$PATH:$GROOVY_HOME/bin
 
 #----------------------------------------------------------
 # gradle
-export GRADLE_HOME=$HOME/local/package/gradle-3.0
+export GRADLE_HOME=$HOME/local/packages/gradle/gradle-3.2.1
 export PATH=$PATH:$GRADLE_HOME/bin
 
 ##----------------------------------------------------------
@@ -144,10 +143,9 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
 #----------------------------------------------------------
 # cuda
-export CUDA_INSTALL_PATH=/usr/local/cuda
-export PATH=$PATH:$CUDA_INSTALL_PATH/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_INSTALL_PATH/lib64
-
+#export CUDA_INSTALL_PATH=/usr/local/cuda
+#export PATH=$PATH:$CUDA_INSTALL_PATH/bin
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_INSTALL_PATH/lib64
 
 #----------------------------------------------------------
 # MeCab
@@ -161,14 +159,14 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_INSTALL_PATH/lib64
 
 #----------------------------------------------------------
 # CaboCha
-export CABOCHA_HOME=$HOME/local/cabocha
+#export CABOCHA_HOME=$HOME/local/cabocha
 #export PATH=$PATH:${CABOCHA_HOME}/bin/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CABOCHA_HOME}/lib/
-export PYTHONPATH=$PYTHONPATH:${CABOCHA_HOME}/python/
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CABOCHA_HOME}/lib/
+#export PYTHONPATH=$PYTHONPATH:${CABOCHA_HOME}/python/
 
 #----------------------------------------------------------
 # SPTK(signal processing tool kit)
-export SPTK_HOME=$HOME/local/sptk
+#export SPTK_HOME=$HOME/local/sptk
 #export PATH=$PATH:${SPTK_HOME}/bin/
 
 #----------------------------------------------------------
@@ -204,13 +202,13 @@ export PYTHONPATH=$PYTHONPATH:~/local/python/lib.linux-x86_64-2.7
 
 #----------------------------------------------------------
 # nodejs
-export NODE_HOME=$HOME/local/nodejs
-export PATH=$PATH:$NODE_HOME/bin
+#export NODE_HOME=$HOME/local/nodejs
+#export PATH=$PATH:$NODE_HOME/bin
 
 #----------------------------------------------------------
 # play framework
-export PLAY_HOME=$HOME/local/play
-export PATH=$PATH:$PLAY_HOME/bin
+#export PLAY_HOME=$HOME/local/play
+#export PATH=$PATH:$PLAY_HOME/bin
 
 #----------------------------------------------------------
 # django
