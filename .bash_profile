@@ -37,7 +37,7 @@ export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
 #fi
 
 # git completion
-git_completion=~/settings/git-completion.bash
+git_completion=~/local/shell/git-completion.bash
 if [ -f ${git_completion} ]; then
     . ${git_completion}
 fi
@@ -50,7 +50,7 @@ fi
 prompt='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]$PWD\[\e[0m\]'
 
 # git prompt
-git_prompt=~/settings/git-prompt.sh
+git_prompt=~/local/shell/git-prompt.sh
 if [ -f ${git_prompt} ]; then
     . ${git_prompt}
 fi
