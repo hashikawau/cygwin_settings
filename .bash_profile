@@ -92,7 +92,7 @@ export PATH=$PATH:$HADOOP_HOME/bin
 
 #----------------------------------------------------------
 # java-8
-export JAVA_HOME=$HOME/local/package/java/jdk
+export JAVA_HOME=$HOME/local/packages/java/jdk
 #export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$JAVA_HOME/bin:$PATH
 
@@ -116,7 +116,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 #----------------------------------------------------------
 # dmd, D language
-export DMD_HOME=~/local/package/dmd2
+export DMD_HOME=~/local/packages/dmd2
 export PATH=$PATH:$DMD_HOME/windows/bin
 
 #----------------------------------------------------------
@@ -129,17 +129,17 @@ export PATH=$PATH:~/.cabal/bin
 
 #----------------------------------------------------------
 # maven
-export M2_HOME=$HOME/local/package/maven/apache-maven-3.3.9
+export M2_HOME=$HOME/local/packages/maven/apache-maven-3.3.9
 export PATH=$PATH:$M2_HOME/bin
 
 #----------------------------------------------------------
 # groovy
-export GROOVY_HOME=$HOME/local/package/groovy/groovy-2.4.7
+export GROOVY_HOME=$HOME/local/packages/groovy/groovy-2.4.7
 export PATH=$PATH:$GROOVY_HOME/bin
 
 #----------------------------------------------------------
 # gradle
-export GRADLE_HOME=$HOME/local/package/gradle-3.0
+export GRADLE_HOME=$HOME/local/packages/gradle-3.0
 export PATH=$PATH:$GRADLE_HOME/bin
 
 ##----------------------------------------------------------
