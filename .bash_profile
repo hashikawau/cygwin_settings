@@ -109,10 +109,15 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 #----------------------------------------------------------
 # freeglut
-export GLUT_HOME=~/local/glut
-export LD_LIBRARY_PATH=-L${GLUT_HOME}/lib
-export LDFLAGS=-L${GLUT_HOME}/lib
-export CPPFLAGS=-I${GLUT_HOME}/include
+#export GLUT_HOME=~/local/glut
+#export LD_LIBRARY_PATH=-L${GLUT_HOME}/lib
+#export LDFLAGS=-L${GLUT_HOME}/lib
+#export CPPFLAGS=-I${GLUT_HOME}/include
+
+#----------------------------------------------------------
+# dmd, D language
+export DMD_HOME=~/local/package/dmd2
+export PATH=$PATH:$DMD_HOME/windows/bin
 
 #----------------------------------------------------------
 # ghc, haskell platform
