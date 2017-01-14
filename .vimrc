@@ -149,3 +149,9 @@ endif
 " Don't wake up system with blinking cursor:
 " http://www.linuxpowertop.org/known.php
 let &guicursor = &guicursor . ",a:blinkon0"
+
+"--------------------------------------
+" Key mapping
+"--------------------------------------
+imap <Nul> <C-p>
+
