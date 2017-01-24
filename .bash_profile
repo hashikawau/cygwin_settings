@@ -1,40 +1,25 @@
 #----------------------------------------------------------
-#  read when login (login command: bash --login -i)
-#----------------------------------------------------------
-#echo "read ~/.bash_profile"
-
-#----------------------------------------------------------
 # setting for cygwin
 #----------------------------------------------------------
-# set language = english?
-#export LANG=C
+set language = english
+export LANG=C
 
 # set language = japanese utf-8
 #export LANG=$(locale -uU)
 
-# set utf-8 (default is shift-jis = 932)
-chcp.com 65001
-
-# java
-#alias java='java -J-Duser.language=en'
-#alias javac='javac -J-Duser.language=en'
-export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
-
-#----------------------------------------------------------
-# read ~/.bashrc
-#----------------------------------------------------------
-#if [ -f ~/.bashrc ]; then
-#    . ~/.bashrc
-#fi
+if [ "`uname -o`" = 'Cygwin' ];then
+    # set utf-8 (default is shift-jis = 932)
+    chcp.com 65001
+fi
 
 #----------------------------------------------------------
 # read completion
 #----------------------------------------------------------
 # bash completion
-#bash_completion=/etc/bash_completion
-#if [ -f ${bash_completion} ]; then
-#    . ${bash_completion}
-#fi
+bash_completion=/etc/bash_completion
+if [ -f ${bash_completion} ]; then
+    . ${bash_completion}
+fi
 
 # git completion
 git_completion=~/local/shell/git-completion.bash
@@ -69,7 +54,7 @@ PS1=${prompt}'\n$ '
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --file-type'
 alias ll='ls -alA'
 alias la='ls -a1A'
 alias l='ls -1A'
@@ -92,13 +77,12 @@ export PATH=$PATH:$HADOOP_HOME/bin
 
 #----------------------------------------------------------
 # java-8
-export JAVA_HOME=$HOME/local/packages/java/jdk
+#alias java='java -J-Duser.language=en'
+#alias javac='javac -J-Duser.language=en'
+export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
+export JAVA_HOME=$HOME/local/packages/jdk
 #export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$JAVA_HOME/bin:$PATH
-
-#----------------------------------------------------------
-# java(for maven)
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 
 #----------------------------------------------------------
 # scala, sbt
@@ -123,7 +107,7 @@ export PATH=$PATH:$DMD_HOME/windows/bin
 # ghc, haskell platform
 export GHC_HOME=~/local/ghc
 export PATH=$PATH:$GHC_HOME/bin
-export HASKELL_HOME=~/local/haskell
+export HASKELL_HOME=~/local/ghc
 export PATH=$PATH:$HASKELL_HOME/bin
 export PATH=$PATH:~/.cabal/bin
 
@@ -134,12 +118,12 @@ export PATH=$PATH:$M2_HOME/bin
 
 #----------------------------------------------------------
 # groovy
-export GROOVY_HOME=$HOME/local/packages/groovy/groovy-2.4.7
+export GROOVY_HOME=$HOME/local/packages/groovy
 export PATH=$PATH:$GROOVY_HOME/bin
 
 #----------------------------------------------------------
 # gradle
-export GRADLE_HOME=$HOME/local/packages/gradle-3.0
+export GRADLE_HOME=$HOME/local/packages/gradle
 export PATH=$PATH:$GRADLE_HOME/bin
 
 ##----------------------------------------------------------
@@ -188,7 +172,6 @@ export PYTHONPATH=$PYTHONPATH:~/local/python/lib.linux-x86_64-2.7
 #    echo "host is not ubuntu195"
 #fi
 
-
 #----------------------------------------------------------
 #export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 #export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:~/lib
@@ -197,7 +180,6 @@ export PYTHONPATH=$PYTHONPATH:~/local/python/lib.linux-x86_64-2.7
 #----------------------------------------------------------
 # programming language d
 #export PATH=$PATH:/c/dm/bin
-
 
 #----------------------------------------------------------
 #export CLASSPATH=$CLASSPATH:/c/Users/hashikawa/.ivy2/cache/org.scalanlp/breeze-viz_2.11/jars
@@ -221,7 +203,4 @@ export PATH=$PATH:$PLAY_HOME/bin
 # django
 export DJANGO_HOME=$HOME/local/django
 export PATH=$PATH:$DJANGO_HOME/bin
-
-
-
 
