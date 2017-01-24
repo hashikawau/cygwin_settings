@@ -149,9 +149,20 @@ endif
 " Don't wake up system with blinking cursor:
 " http://www.linuxpowertop.org/known.php
 let &guicursor = &guicursor . ",a:blinkon0"
+<<<<<<< 3719e3eb2513ada94b02cff62553232196f88e67
 
 "--------------------------------------
 " Key mapping
 "--------------------------------------
 imap <Nul> <C-p>
 
+||||||| merged common ancestors
+=======
+
+"--------------------------------------
+" Key mapping
+"--------------------------------------
+imap <Nul> <C-n>
+
+
+>>>>>>> temporary commit

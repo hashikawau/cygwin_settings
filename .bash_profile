@@ -203,3 +203,15 @@ export PYTHONPATH=$PYTHONPATH:~/local/python/lib.linux-x86_64-2.7
 export DJANGO_HOME=$HOME/local/django
 export PATH=$PATH:$DJANGO_HOME/bin
 
+<<<<<<< 3719e3eb2513ada94b02cff62553232196f88e67
+||||||| merged common ancestors
+
+
+
+=======
+
+export DMD_HOME=$HOME/local/packages/dmd2
+export PATH=$PATH:$DMD_HOME/windows/bin
+
+
+>>>>>>> temporary commit
