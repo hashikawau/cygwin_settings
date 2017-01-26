@@ -66,6 +66,7 @@ colorscheme desert
 set hlsearch
 "set nohlsearch
 set showmatch
+set matchtime=1
 
 "--------------------------------------
 "
@@ -95,7 +96,7 @@ set backupdir=~/.vim/bak
 
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
-set history=50		" keep 50 lines of command line history
+set history=200		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 
 " Only do this part when compiled with support for autocommands
@@ -151,7 +152,28 @@ endif
 let &guicursor = &guicursor . ",a:blinkon0"
 
 "--------------------------------------
+" swap file
+"--------------------------------------
+augroup swapchoice-readonly
+    autocmd!
+    autocmd SwapExists * let v:swapchoice = 'o'
+augroup END
+
+"--------------------------------------
+" display
+"--------------------------------------
+set display=lastline
+set pumheight=10
+
+"--------------------------------------
 " Key mapping
 "--------------------------------------
 imap <Nul> <C-p>
+
+nnoremap Y y$
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
