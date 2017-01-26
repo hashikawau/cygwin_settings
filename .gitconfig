@@ -3,6 +3,8 @@
     email = hashikawa.yuuichi@gmail.com
 [core]
     editor = vim
+    pager = less -cm
+    quotepath = false
 [merge]
     tool = vimdiff
     conflictstyle = diff3
