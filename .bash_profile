@@ -1,11 +1,8 @@
 #----------------------------------------------------------
 # setting for cygwin
 #----------------------------------------------------------
-set language = english
-export LANG=C
-
-# set language = japanese utf-8
-#export LANG=$(locale -uU)
+set language = japanese utf-8
+export LANG=$(locale -uU)
 
 if [ "`uname -o`" = 'Cygwin' ];then
     # set utf-8 (default is shift-jis = 932)
@@ -49,22 +46,6 @@ prompt=${prompt}${branch}
 PS1=${prompt}'\n$ '
 
 #----------------------------------------------------------
-# set alias
-#----------------------------------------------------------
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-alias ls='ls --color=auto --file-type'
-alias ll='ls -alA'
-alias la='ls -a1A'
-alias l='ls -1A'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-#alias diff='colordiff -u'
-alias wget='wget --restrict-file-names=nocontrol'
-
-#----------------------------------------------------------
 # set environmet variables
 #----------------------------------------------------------
 export PATH=$PATH:$HOME/local/bin
@@ -83,6 +64,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 #alias java='java -J-Duser.language=en'
 #alias javac='javac -J-Duser.language=en'
 export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8'
+export JAVA_HOME=$HOME/local/packages/jdk
+export PATH=$PATH:$JAVA_HOME/bin
 
 #----------------------------------------------------------
 # scala, sbt
@@ -203,7 +186,10 @@ export PYTHONPATH=$PYTHONPATH:~/local/python/lib.linux-x86_64-2.7
 export DJANGO_HOME=$HOME/local/django
 export PATH=$PATH:$DJANGO_HOME/bin
 
-if [ -f $HOME/.bashrc ]; then
-    source $HOME/.bashrc
+#----------------------------------------------------------
+# read .bashrc
+#----------------------------------------------------------
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
 fi
 
