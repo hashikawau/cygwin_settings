@@ -45,8 +45,8 @@ endif
 "--------------------------------------
 " script's make command
 "--------------------------------------
-autocmd BufRead,BufNewFile *.sh setfiletype bash
-autocmd Filetype bash setlocal makeprg=bash\ %
+"autocmd BufRead,BufNewFile *.sh setfiletype bash
+autocmd Filetype sh setlocal makeprg=bash\ %
 autocmd BufRead,BufNewFile *.py setfiletype python
 autocmd Filetype python setlocal makeprg=python3\ %
 autocmd BufRead,BufNewFile *.d setfiletype d
