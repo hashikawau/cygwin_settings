@@ -30,6 +30,29 @@ set list
 set listchars=tab:>\ ,trail:.
 
 "--------------------------------------
+" undo option
+"--------------------------------------
+if has('persistent_undo')
+  set undodir=./.vimundo,~/.vim/vimundo
+  set undofile
+  "set undodir=./.vimundo,~/.vimundo
+  "augroup vimrc-undofile
+  "  autocmd!
+  "  autocmd BufReadPre ~/* setlocal undofile
+  "augroup END
+endif
+
+"--------------------------------------
+" script's make command
+"--------------------------------------
+autocmd BufRead,BufNewFile *.sh setfiletype bash
+autocmd Filetype bash setlocal makeprg=bash\ %
+autocmd BufRead,BufNewFile *.py setfiletype python
+autocmd Filetype python setlocal makeprg=python3\ %
+autocmd BufRead,BufNewFile *.d setfiletype d
+autocmd Filetype d setlocal makeprg=rdmd\ --main\ -unittest\ %
+
+"--------------------------------------
 " Set colorscheme
 "--------------------------------------
 "highlight NonText guibg=none guifg=LightMagenta
@@ -99,37 +122,37 @@ set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 set history=200		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 
-" Only do this part when compiled with support for autocommands
-if has("autocmd")
-  augroup redhat
-  autocmd!
-  " In text files, always limit the width of text to 78 characters
-  autocmd BufRead *.txt set tw=78
-  " When editing a file, always jump to the last cursor position
-  autocmd BufReadPost *
-  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-  \   exe "normal! g'\"" |
-  \ endif
-  " don't write swapfile on most commonly used directories for NFS mounts or USB sticks
-  autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
-  " start with spec file template
-  autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
-  augroup END
-endif
-if has("cscope") && filereadable("/usr/bin/cscope")
-   set csprg=/usr/bin/cscope
-   set csto=0
-   set cst
-   set nocsverb
-   " add any database in current directory
-   if filereadable("cscope.out")
-      cs add cscope.out
-   " else add database pointed to by environment
-   elseif $CSCOPE_DB != ""
-      cs add $CSCOPE_DB
-   endif
-   set csverb
-endif
+"" Only do this part when compiled with support for autocommands
+"if has("autocmd")
+"  augroup redhat
+"  autocmd!
+"  " In text files, always limit the width of text to 78 characters
+"  autocmd BufRead *.txt set tw=78
+"  " When editing a file, always jump to the last cursor position
+"  autocmd BufReadPost *
+"  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+"  \   exe "normal! g'\"" |
+"  \ endif
+"  " don't write swapfile on most commonly used directories for NFS mounts or USB sticks
+"  autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
+"  " start with spec file template
+"  autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
+"  augroup END
+"endif
+"if has("cscope") && filereadable("/usr/bin/cscope")
+"   set csprg=/usr/bin/cscope
+"   set csto=0
+"   set cst
+"   set nocsverb
+"   " add any database in current directory
+"   if filereadable("cscope.out")
+"      cs add cscope.out
+"   " else add database pointed to by environment
+"   elseif $CSCOPE_DB != ""
+"      cs add $CSCOPE_DB
+"   endif
+"   set csverb
+"endif
 
 "" Switch syntax highlighting on, when the terminal has colors
 "" Also switch on highlighting the last used search pattern.
@@ -176,4 +199,42 @@ nnoremap - <C-x>
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+"--------------------------------------
+" neobundle
+"--------------------------------------
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+call neobundle#end()
+
+filetype plugin indent on
+
+let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets/'
+
+" Plugin key-mappings.
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+ set conceallevel=2 concealcursor=i
+endif
 
