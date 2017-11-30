@@ -19,3 +19,6 @@ alias wget='wget --restrict-file-names=nocontrol'
 alias pbcopy='clip'
 alias pbpaste='cat /dev/clipboard'
 
+alias sakura='cygstart ~/local/bin/sakura'
+alias a5m2='cygstart ~/local/bin/a5m2'
+

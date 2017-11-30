@@ -5,6 +5,7 @@
     editor = vim
     pager = less -cm
     quotepath = false
+	autocrlf = input
 [merge]
     tool = vimdiff
     conflictstyle = diff3
