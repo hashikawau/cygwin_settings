@@ -50,7 +50,11 @@ autocmd Filetype sh setlocal makeprg=bash\ %
 autocmd BufRead,BufNewFile *.py setfiletype python
 autocmd Filetype python setlocal makeprg=python3\ %
 autocmd BufRead,BufNewFile *.d setfiletype d
-autocmd Filetype d setlocal makeprg=rdmd\ --main\ -unittest\ %
+autocmd Filetype d setlocal makeprg=rdmd\ -unittest\ %
+autocmd BufRead,BufNewFile *.lisp setfiletype lisp
+autocmd Filetype lisp setlocal makeprg=clisp\ %
+autocmd BufRead,BufNewFile *.hs setfiletype haskell
+autocmd Filetype haskell setlocal makeprg=runghc\ %
 
 "--------------------------------------
 " Set colorscheme
@@ -199,5 +203,4 @@ nnoremap - <C-x>
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-
 
