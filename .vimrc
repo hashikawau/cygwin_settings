@@ -50,7 +50,9 @@ autocmd Filetype sh setlocal makeprg=bash\ %
 autocmd BufRead,BufNewFile *.py setfiletype python
 autocmd Filetype python setlocal makeprg=python3\ %
 autocmd BufRead,BufNewFile *.d setfiletype d
-autocmd Filetype d setlocal makeprg=rdmd\ --main\ -unittest\ %
+"autocmd Filetype d setlocal makeprg=rdmd\ --main\ -unittest\ %
+autocmd Filetype d setlocal makeprg=rdmd\ -unittest\ %
+autocmd Filetype lisp setlocal makeprg=clisp\ -C\ %
 
 "--------------------------------------
 " Set colorscheme
@@ -201,8 +203,11 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 "--------------------------------------
-" neobundle
+" NeoBundle
 "--------------------------------------
+set nocompatible
+filetype off
+
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -212,6 +217,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
+" lisp slimv
+"NeoBundle 'kovisoft/slimv'
 
 call neobundle#end()
 
