@@ -53,6 +53,7 @@ autocmd BufRead,BufNewFile *.d setfiletype d
 "autocmd Filetype d setlocal makeprg=rdmd\ --main\ -unittest\ %
 autocmd Filetype d setlocal makeprg=rdmd\ -unittest\ %
 autocmd Filetype lisp setlocal makeprg=clisp\ -C\ %
+autocmd Filetype cpp setlocal makeprg=g++\ -o\ /tmp/tmp.exe\ %\ &&\ /tmp/tmp.exe
 
 "--------------------------------------
 " Set colorscheme
