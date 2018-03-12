@@ -31,7 +31,7 @@ done
 #--------------------------------------
 #
 #--------------------------------------
-mkdir -p ~/local/shell/
+mkdir -p ~/local/shell
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
     > ~/local/shell/git-completion.bash
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
