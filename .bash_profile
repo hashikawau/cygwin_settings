@@ -1,10 +1,9 @@
 #----------------------------------------------------------
 # setting for cygwin
 #----------------------------------------------------------
-set language = japanese utf-8
-export LANG=$(locale -uU)
-
 if [ "`uname -o`" = 'Cygwin' ];then
+    set language = japanese utf-8
+    export LANG=$(locale -uU)
     # set utf-8 (default is shift-jis = 932)
     chcp.com 65001
 fi
