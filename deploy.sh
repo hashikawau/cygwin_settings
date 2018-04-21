@@ -31,8 +31,9 @@ done
 #--------------------------------------
 #
 #--------------------------------------
-#curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
-#    > ~/local/shell/git-completion.bash
-#curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
-#    > ~/local/shell/git-prompt.sh
+mkdir -p ~/local/shell/
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
+    > ~/local/shell/git-completion.bash
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
+    > ~/local/shell/git-prompt.sh
 
