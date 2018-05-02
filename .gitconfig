@@ -17,6 +17,8 @@
     ;hist = log --pretty=format:\\\"%h %a%d | %s%d [%an] \\\" --graph --date=short
     hist = log --graph --date=short
     st = status
+    co = checkout
+    ci = commit
     show = show -M
     sh = show --stat
     ls = ls-files
