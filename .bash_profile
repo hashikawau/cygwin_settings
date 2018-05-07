@@ -9,6 +9,10 @@ if [ "`uname -o`" = 'Cygwin' ];then
 fi
 
 #----------------------------------------------------------
+# pkg-config
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+
+#----------------------------------------------------------
 # read completion
 #----------------------------------------------------------
 # bash completion
