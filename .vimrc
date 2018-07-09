@@ -54,7 +54,7 @@ autocmd Filetype d setlocal makeprg=rdmd\ -unittest\ %
 autocmd BufRead,BufNewFile *.lisp setfiletype lisp
 autocmd Filetype lisp setlocal makeprg=clisp\ %
 autocmd BufRead,BufNewFile *.hs setfiletype haskell
-autocmd Filetype haskell setlocal makeprg=runghc\ %
+autocmd Filetype haskell setlocal makeprg=runghc.sh\ %
 
 "--------------------------------------
 " Set colorscheme
