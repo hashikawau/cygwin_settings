@@ -10,6 +10,8 @@ files=(
     .tmux.conf
     .vimrc
     .vrapperrc
+    .ideavimrc
+    .vimrc.keymap
 )
 
 #--------------------------------------
