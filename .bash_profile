@@ -8,6 +8,8 @@ if [ "`uname -o`" = 'Cygwin' ];then
     chcp.com 65001
 fi
 
+export CYGWIN='winsymlinks'
+
 #----------------------------------------------------------
 # pkg-config
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
