@@ -12,6 +12,7 @@ files=(
     .vrapperrc
     .ideavimrc
     .vimrc.keymap
+    .vsvimrc
 )
 
 #--------------------------------------
