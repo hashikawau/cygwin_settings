@@ -8,7 +8,7 @@ if [ "`uname -o`" = 'Cygwin' ];then
     chcp.com 65001
 fi
 
-export CYGWIN='winsymlinks'
+export CYGWIN='winsymlinks:native'
 
 #----------------------------------------------------------
 # pkg-config
