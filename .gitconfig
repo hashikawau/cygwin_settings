@@ -5,6 +5,7 @@
     editor = vim
     pager = less -cm
     quotepath = false
+    autocrlf = input
 [merge]
     tool = vimdiff
     conflictstyle = diff3
@@ -15,7 +16,7 @@
     #patience = true
 [alias]
     ;hist = log --pretty=format:\\\"%h %a%d | %s%d [%an] \\\" --graph --date=short
-    hist = log --graph --date=short
+    hist = log --graph --date=short --stat
     st = status
     co = checkout
     ci = commit
@@ -32,3 +33,5 @@
 
 [push]
     default = matching
+[pager]
+	branch = false
