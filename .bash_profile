@@ -8,7 +8,10 @@ if [ "`uname -o`" = 'Cygwin' ];then
     chcp.com 65001
 fi
 
-export CYGWIN='winsymlinks:native'
+SYMLINK_OPTION='winsymlinks:lnk'     # windows link
+#SYMLINK_OPTION='winsymlinks:native' # default
+#SYMLINK_OPTION='winsymlinks:nativestrict' # cannot use
+export CYGWIN="${CYGWIN} ${SYMLINK_OPTION}" # priority is tail
 
 #----------------------------------------------------------
 # pkg-config

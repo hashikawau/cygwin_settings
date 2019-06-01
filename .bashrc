@@ -19,3 +19,5 @@ alias wget='wget --restrict-file-names=nocontrol'
 alias pbcopy='clip'
 alias pbpaste='cat /dev/clipboard'
 
+alias open='cygstart'
+
