@@ -3,7 +3,7 @@ source ~/.vimrc.keymap
 set nowrapscan
 
 set clipboard=unnamed,autoselect
-set surround
+"set surround
 set hlsearch
 set incsearch
 set ignorecase
