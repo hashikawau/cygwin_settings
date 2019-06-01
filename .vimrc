@@ -1,3 +1,6 @@
+source ~/.vimrc.settings
+source ~/.vimrc.keymap
+
 "--------------------------------------
 " set encoding, line feed
 "--------------------------------------
@@ -21,13 +24,6 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 "--------------------------------------
 set history=200
 set mouse=n
-set ignorecase
-set smartcase
-set autoindent
-set incsearch
-set number
-set list
-set listchars=tab:>\ ,trail:.
 
 "--------------------------------------
 " undo option
@@ -90,33 +86,17 @@ colorscheme desert
 "colorscheme torte
 "colorscheme zellner
 
-set hlsearch
-"set nohlsearch
-set showmatch
-set matchtime=1
-
 "--------------------------------------
 "
 "--------------------------------------
 set wildmenu wildmode=list:full
-"set clipboard=unnamed
-set clipboard=autoselect
-"set guioptions+=a
 syntax on
-
-set nowrap
-set nowrapscan
 
 
 set nocompatible	" Use Vim defaults (much better!)
 set backspace=indent,eol,start		" allow backspacing over everything in insert mode
 
 
-set ai			" always set autoindenting on
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
 set backup		" keep a backup file
 set backupdir=~/.vim/bak
 
@@ -189,7 +169,6 @@ augroup END
 "--------------------------------------
 " display
 "--------------------------------------
-set display=lastline
 set pumheight=10
 
 "--------------------------------------
@@ -197,10 +176,7 @@ set pumheight=10
 "--------------------------------------
 imap <Nul> <C-p>
 
-nnoremap Y y$
-nnoremap + <C-a>
-nnoremap - <C-x>
-
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
 

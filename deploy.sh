@@ -9,9 +9,10 @@ files=(
     .gitconfig
     .tmux.conf
     .vimrc
+    .vimrc.keymap
+    .vimrc.settings
     .vrapperrc
     .ideavimrc
-    .vimrc.keymap
     .vsvimrc
 )
 
@@ -24,8 +25,8 @@ do
     target_file_path="${dir_path}/${file_name}"
     echo "deploy ${file_name}"
     rm -f "${file_name}"
-    ln -s "${target_file_path}"
-    #cp "${target_file_path}" .
+    #ln -s "${target_file_path}"
+    cp "${target_file_path}" .
 )
 done
 

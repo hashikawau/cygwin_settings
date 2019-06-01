@@ -1,0 +1,33 @@
+
+set ignorecase
+set smartcase
+set autoindent
+set incsearch
+set number
+set list
+set listchars=tab:>\ ,trail:.
+
+set hlsearch
+"set nohlsearch
+set showmatch
+set matchtime=1
+
+set nowrap
+set display=lastline
+
+set nowrapscan
+
+set ai			" always set autoindenting on
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set scrolloff=2
+
+"set guioptions+=a
+"set clipboard=unnamed
+"set clipboard=autoselect
+set clipboard=unnamed,autoselect
+
+
