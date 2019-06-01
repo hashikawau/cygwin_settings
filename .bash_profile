@@ -76,6 +76,13 @@ export JAVA_HOME=$HOME/local/packages/jdk
 export PATH=$PATH:$JAVA_HOME/bin
 
 #----------------------------------------------------------
+# Android Studio
+export ANDROID_STUDIO_HOME='/home/hashikawa/AppData/Local/Android/Sdk'
+export PATH=$PATH:$ANDROID_STUDIO_HOME/platform-tools
+export PATH=$PATH:$ANDROID_STUDIO_HOME/build-tools/28.0.3
+export PATH=$PATH:$ANDROID_STUDIO_HOME/emulator
+
+#----------------------------------------------------------
 # scala, sbt
 #export SCALA_HOME=~/local/scala
 #export PATH=$PATH:$SCALA_HOME/bin
