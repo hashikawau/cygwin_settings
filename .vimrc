@@ -51,6 +51,10 @@ autocmd BufRead,BufNewFile *.lisp setfiletype lisp
 autocmd Filetype lisp setlocal makeprg=clisp\ %
 autocmd BufRead,BufNewFile *.hs setfiletype haskell
 autocmd Filetype haskell setlocal makeprg=runghc.sh\ %
+autocmd BufRead,BufNewFile *.java setfiletype java
+autocmd Filetype java setlocal makeprg=runjava.sh\ %
+autocmd BufRead,BufNewFile *.html setfiletype html
+autocmd BufRead,BufNewFile *.js setfiletype javascript
 
 "--------------------------------------
 " Set colorscheme
@@ -68,23 +72,11 @@ autocmd Filetype haskell setlocal makeprg=runghc.sh\ %
 "--------------------------------------
 " Writing vim command
 "   :read !ls /usr/share/vim/vim74/colors/ | sed 's/ +/\n/g' | awk -F'.' '/.*\.vim/{print "\"colorscheme " $1}'
-"colorscheme blue
-"colorscheme darkblue
-"colorscheme default
-"colorscheme delek
-colorscheme desert
-"colorscheme elflord
-"colorscheme evening
-"colorscheme koehler
-"colorscheme morning
-"colorscheme murphy
-"colorscheme pablo
-"colorscheme peachpuff
-"colorscheme ron
-"colorscheme shine
-"colorscheme slate
-"colorscheme torte
-"colorscheme zellner
+colorscheme badwolf
+"colorscheme goodwolf
+"colorscheme twilight
+"colorscheme molokai
+"colorscheme desert
 
 "--------------------------------------
 "
@@ -179,4 +171,7 @@ imap <Nul> <C-p>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+nnoremap <c-@>r :.w !bash<CR>
+nnoremap <C-@>@ :make!<CR>
+nnoremap <C-@>ma :make! all<CR>
 

@@ -62,3 +62,21 @@ if [ ! -f ~/local/shell/git-prompt.sh ]; then
     curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
         > ~/local/shell/git-prompt.sh
 fi
+
+#--------------------------------------
+# vim options
+#--------------------------------------
+mkdir -p ~/.vim/.vimundo
+mkdir -p ~/.vim/colors
+curl https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim \
+    > ~/.vim/colors/badwolf.vim
+curl https://raw.githubusercontent.com/sjl/badwolf/master/colors/goodwolf.vim \
+    > ~/.vim/colors/goodwolf.vim
+curl https://www.vim.org/scripts/download_script.php?src_id=10496 \
+    > ~/.vim/colors/twilight.vim
+curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim \
+    > ~/.vim/colors/molokai.vim
+
+mkdir -p ~/.vim/ftplugin
+cp -f ${dir_path}/.vim/ftplugin/html.vim ~/.vim/ftplugin
+
