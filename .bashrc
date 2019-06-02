@@ -20,4 +20,5 @@ alias pbcopy='clip'
 alias pbpaste='cat /dev/clipboard'
 
 alias open='cygstart'
+alias objdump='objdump -M intel'
 
