@@ -34,10 +34,10 @@ done
 #
 #--------------------------------------
 bin_dirname='local/bin'
-for file_name in "$(ls -1 ${dir_path}/${bin_dirname})"
+for file_name in $(ls ${dir_path}/${bin_dirname})
 do
 (
-    if [ -z ${file_name} ]; then
+    if [ -z "${file_name}" ]; then
         continue
     fi
     src_file="${dir_path}/${bin_dirname}/${file_name}"
@@ -45,6 +45,7 @@ do
     echo "deploy ${src_file} -> ${dest_file}"
     rm -f "${dest_file}"
     ln -s "${src_file}" "${dest_file}"
+
     #cp "${src_file}" "${dest_file}"
 )
 done

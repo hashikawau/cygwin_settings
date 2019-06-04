@@ -171,6 +171,7 @@ imap <Nul> <C-p>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+nnoremap <c-@>o :silent .w !xargs cygstart_file_path.sh<CR>
 nnoremap <c-@>r :.w !bash<CR>
 nnoremap <C-@>@ :make!<CR>
 nnoremap <C-@>ma :make! all<CR>
