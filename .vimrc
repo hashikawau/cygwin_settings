@@ -90,7 +90,7 @@ set backspace=indent,eol,start		" allow backspacing over everything in insert mo
 
 
 set backup		" keep a backup file
-set backupdir=~/.vim/bak
+set backupdir=~/bak
 
 
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more

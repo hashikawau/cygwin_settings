@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #--------------------------------------
 #
 #--------------------------------------
@@ -50,13 +51,25 @@ do
 )
 done
 
+
+#--------------------------------------
+#
+#--------------------------------------
+wget https://raw.githubusercontent.com/transcode-open/apt-cyg/master/apt-cyg
+chmod +x apt-cyg
+mv apt-cyg /usr/local/bin
+
+apt-cyg install vim
+apt-cyg install curl
+mkdir -p ~/bak
+
 #--------------------------------------
 #
 #--------------------------------------
 mkdir -p ~/local/shell
 if [ ! -f ~/local/shell/git-completion.bash ]; then
-    #curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
-    curl https://raw.githubusercontent.com/git/git/65ed8ff376c4fdd8dd560b3ddbf7d6cd771f860e/contrib/completion/git-completion.bash \
+    #curl https://raw.githubusercontent.com/git/git/65ed8ff376c4fdd8dd560b3ddbf7d6cd771f860e/contrib/completion/git-completion.bash \
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
         > ~/local/shell/git-completion.bash
 fi
 if [ ! -f ~/local/shell/git-prompt.sh ]; then
