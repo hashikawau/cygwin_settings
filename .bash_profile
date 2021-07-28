@@ -208,3 +208,4 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+export PATH="$PATH:/usr/local/opt/mysql-client/bin"

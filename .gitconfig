@@ -1,9 +1,9 @@
 [user]
-    name = hashikawa
-    email = hashikawa.yuuichi@gmail.com
+    name = Yuichi Hashikawa
+    email = yuichi.hashikawa01@g.softbank.co.jp
 [core]
     editor = vim
-    pager = less -cm
+    pager = LESSCHARSET=utf-8 less -cm
     quotepath = false
     autocrlf = input
 [merge]

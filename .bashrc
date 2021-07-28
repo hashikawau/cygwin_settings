@@ -6,7 +6,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-alias ls='ls --color=auto --file-type'
+export LSCOLORS=gxfxcxdxabegedabagacad
+alias ls='ls -GF'
 alias ll='ls -alA'
 alias la='ls -a1A'
 alias l='ls -1A'
@@ -19,6 +20,6 @@ alias wget='wget --restrict-file-names=nocontrol'
 #alias pbcopy='clip'
 #alias pbpaste='cat /dev/clipboard'
 
-alias open='cygstart'
+#alias open='cygstart'
 alias objdump='objdump -M intel'
 
