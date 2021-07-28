@@ -55,6 +55,8 @@ autocmd BufRead,BufNewFile *.java setfiletype java
 autocmd Filetype java setlocal makeprg=runjava.sh\ %
 autocmd BufRead,BufNewFile *.html setfiletype html
 autocmd BufRead,BufNewFile *.js setfiletype javascript
+autocmd BufRead,BufNewFile *.rs setfiletype rust
+autocmd Filetype rust setlocal makeprg=cargo\ run
 
 "--------------------------------------
 " Set colorscheme
@@ -175,4 +177,30 @@ nnoremap <c-@>o :silent .w !xargs cygstart_file_path.sh<CR>
 nnoremap <c-@>r :.w !bash<CR>
 nnoremap <C-@>@ :make!<CR>
 nnoremap <C-@>ma :make! all<CR>
+
+"--------------------------------------
+" neobundle
+"--------------------------------------
+set nocompatible               " Be iMproved
+filetype off                   " Required!
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+filetype plugin indent on     " Required!
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
+
+NeoBundle 'easymotion/vim-easymotion'
+
+call neobundle#end()
 

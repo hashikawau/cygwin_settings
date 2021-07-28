@@ -94,3 +94,7 @@ curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim 
 mkdir -p ~/.vim/ftplugin
 cp -f ${dir_path}/.vim/ftplugin/html.vim ~/.vim/ftplugin
 
+# neobundle
+mkdir -p ~/.vim/bundle
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
