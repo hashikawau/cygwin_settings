@@ -62,6 +62,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/c/Windows/System32
 export LIBRARY_PATH=$LD_LIBRARY_PATH
 
 #----------------------------------------------------------
+# rust
+export RUST_BACKTRACE=1
+
+#----------------------------------------------------------
 # hadoop
 #export HADOOP_HOME=/usr/local/hadoop-2.7.1
 #export PATH=$PATH:$HADOOP_HOME/bin
