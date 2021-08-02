@@ -201,6 +201,7 @@ if neobundle#exists_not_installed_bundles()
 endif
 
 NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'dhruvasagar/vim-table-mode'
 
 call neobundle#end()
 
