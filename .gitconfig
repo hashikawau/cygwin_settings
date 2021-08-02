@@ -20,6 +20,9 @@
     st = status
     co = checkout
     ci = commit
+    bra = branch
+    sta = stash
+    stap = stash pop
     show = show -M
     sh = show --stat
     ls = ls-files
