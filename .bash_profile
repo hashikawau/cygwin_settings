@@ -1,6 +1,7 @@
 #----------------------------------------------------------
 # setting for cygwin
 #----------------------------------------------------------
+export LANG=ja_JP.UTF-8
 if [ "`uname -o`" = 'Cygwin' ];then
     set language = japanese utf-8
     export LANG=$(locale -uU)
