@@ -16,7 +16,7 @@
     #patience = true
 [alias]
     ;hist = log --pretty=format:\\\"%h %a%d | %s%d [%an] \\\" --graph --date=short
-    hist = log --graph --date=short --stat
+    hist = log --graph --date=local --stat
     st = status
     co = checkout
     ci = commit
