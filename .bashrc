@@ -16,8 +16,8 @@ alias egrep='egrep --color=auto'
 #alias diff='colordiff -u'
 alias wget='wget --restrict-file-names=nocontrol'
 
-alias pbcopy='clip'
-alias pbpaste='cat /dev/clipboard'
+#alias pbcopy='clip'
+#alias pbpaste='cat /dev/clipboard'
 
 alias open='cygstart'
 alias objdump='objdump -M intel'
