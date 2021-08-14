@@ -65,6 +65,7 @@ export LIBRARY_PATH=$LD_LIBRARY_PATH
 #----------------------------------------------------------
 # rust
 export RUST_BACKTRACE=1
+export PATH=$PATH:$HOME/.cargo/bin
 
 #----------------------------------------------------------
 # hadoop
