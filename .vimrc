@@ -56,7 +56,9 @@ autocmd Filetype java setlocal makeprg=runjava.sh\ %
 autocmd BufRead,BufNewFile *.html setfiletype html
 autocmd BufRead,BufNewFile *.js setfiletype javascript
 autocmd BufRead,BufNewFile *.rs setfiletype rust
-autocmd Filetype rust setlocal makeprg=cargo\ run
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+autocmd Filetype rust setlocal makeprg=cargo
 
 "--------------------------------------
 " Set colorscheme
@@ -176,6 +178,8 @@ cnoremap <C-n> <Down>
 nnoremap <c-@>o :silent .w !xargs cygstart_file_path.sh<CR>
 nnoremap <c-@>r :.w !bash<CR>
 nnoremap <C-@>@ :make!<CR>
+nnoremap <C-@>r :make! run<CR>
+nnoremap <C-@>t :make! test<CR>
 nnoremap <C-@>ma :make! all<CR>
 
 "--------------------------------------
@@ -202,6 +206,9 @@ endif
 
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'dhruvasagar/vim-table-mode'
+NeoBundle 'rust-lang/rust.vim'
 
 call neobundle#end()
+
+let g:rustfmt_autosave = 1
 

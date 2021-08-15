@@ -98,3 +98,5 @@ cp -f ${dir_path}/.vim/ftplugin/html.vim ~/.vim/ftplugin
 mkdir -p ~/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
+cargo install rusty-tags
+
