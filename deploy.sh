@@ -80,7 +80,7 @@ fi
 #--------------------------------------
 # vim options
 #--------------------------------------
-mkdir -p ~/.vim/.vimundo
+mkdir -p ~/.vim/vimundo
 mkdir -p ~/.vim/colors
 curl https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim \
     > ~/.vim/colors/badwolf.vim
