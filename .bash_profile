@@ -63,6 +63,12 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/c/Windows/System32
 export LIBRARY_PATH=$LD_LIBRARY_PATH
 
 #----------------------------------------------------------
+# go
+export PATH=$PATH:/c/Program\ Files/Go/bin
+#export GOPATH=$HOME/go
+export PATH=$PATH:$HOME/go/bin
+
+#----------------------------------------------------------
 # rust
 export RUST_BACKTRACE=1
 export PATH=$PATH:$HOME/.cargo/bin

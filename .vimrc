@@ -58,7 +58,11 @@ autocmd BufRead,BufNewFile *.js setfiletype javascript
 autocmd BufRead,BufNewFile *.rs setfiletype rust
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
-autocmd Filetype rust setlocal makeprg=cargo
+autocmd Filetype rust setlocal makeprg=cargo\ run\ %
+autocmd BufRead,BufNewFile *.rust setfiletype rust
+autocmd Filetype go setlocal makeprg=go\ run\ %
+autocmd BufRead,BufNewFile *.go setfiletype go
+autocmd BufWritePost *.go :silent !goimports -w %
 
 "--------------------------------------
 " Set colorscheme
@@ -212,3 +216,10 @@ call neobundle#end()
 
 let g:rustfmt_autosave = 1
 
+"--------------------------------------
+" Plug
+"--------------------------------------
+call plug#begin()
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+call plug#end()
