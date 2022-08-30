@@ -27,7 +27,7 @@ do
     echo "deploy ${file_name}"
     rm -f "${file_name}"
     #ln -s "${target_file_path}"
-    cp "${target_file_path}" .
+    ln -s "${target_file_path}" .
 )
 done
 
