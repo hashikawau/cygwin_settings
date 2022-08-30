@@ -64,9 +64,9 @@ export LIBRARY_PATH=$LD_LIBRARY_PATH
 
 #----------------------------------------------------------
 # go
-export PATH=$PATH:/c/Program\ Files/Go/bin
-#export GOPATH=$HOME/go
-export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 #----------------------------------------------------------
 # rust
