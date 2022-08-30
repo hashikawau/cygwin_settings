@@ -82,3 +82,8 @@ nnoremap == gg=G
 "map  <Leader>w <Plug>(easymotion-bd-w)
 "nmap <Leader>w <Plug>(easymotion-overwin-w)
 
+" -------------------------------------
+" lsp
+" -------------------------------------
+nmap <C-]> :LspDefinition<Cr>
+
