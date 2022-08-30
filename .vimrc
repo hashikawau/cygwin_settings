@@ -55,6 +55,7 @@ autocmd BufRead,BufNewFile *.java setfiletype java
 autocmd Filetype java setlocal makeprg=runjava.sh\ %
 autocmd BufRead,BufNewFile *.html setfiletype html
 autocmd BufRead,BufNewFile *.js setfiletype javascript
+autocmd BufRead,BufNewFile *.vue setfiletype vue
 autocmd BufRead,BufNewFile *.rs setfiletype rust
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
